@@ -40,19 +40,25 @@ public class Computer {
 	 *  3. 생성자를 몇 개 정의할 지?
 	 */
 	
-	// 생성자 (Constructor) 객체를 생성할 때 호출되는 부분
+	// 생성자 (Constructor) 객체를 생성할 때 호출되는 부분 (메소드 아님)
 		//생성자 명은 클래스명과 같아야 해!
 		//return 데이터 타입(void, int, ...)이 명시 되어 있지 않다.
 		//생성자는 다중정의(여러 개 정의) 가능 (형태만 조금 다르면 됨) 
 		//=> "생성자가 overloading 되어 있다"
 		//이 객체를 생성해서 사용하는 용도에 따라 다양한 생성자 제공 가능
+	//default (기본) 생성자
+		//생성자가 한 개라면 기본생성자 안 만들어도 알아서 호출됨
+		//근데 생성자가 여러 개 라면, 기본생성자는 사라지므로, 기본생성자 만들어줘야 해
 	public Computer() {
 		System.out.println("Computer() 호출됨");
 	}
+	//이 생성자 호출하려면 new Computer();
 	
 	public Computer(int num) {
 		System.out.println("Computer() 호출됨");
 	}
+	//이 생성자 호출하려면 new Computer(숫자);
+	
 	public Computer(int num, String name) {
 		System.out.println("Computer() 호출됨");
 	}
